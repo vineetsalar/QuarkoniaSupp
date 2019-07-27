@@ -1,0 +1,232 @@
+\RequirePackage{lineno}
+\documentclass[a4paper,11pt]{article}
+\linenumbers
+
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{xspace}
+\usepackage{ifthen}
+\usepackage{times}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=15mm,
+ right=15mm,
+ top=30mm,
+ bottom=22mm,
+ }
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\footskip 20pt
+\fancyhf{}
+\chead{Report Referee 2}
+\cfoot{{Page \thepage~of~\pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\begin{document}
+%\fontsize{10}{12}
+\selectfont
+
+
+\section*{Report from referee 2 JPG}
+
+This work by Kumar, Shukla, and Bhattacharyya presents a phenomenological study of 
+quarkonia (J/psi and Upsilon) suppression in PbPb collisions at  5.02 TeV. 
+The predictions of their phenomenological model --including gluon-dissociation 
+inside the QGP, suppression due to hadronic comovers, regeneration of heavy-quark 
+pairs, and nuclear parton distribution functions (nPDFs) effects-- are compared 
+to the experimental data from ALICE, ATLAS, and CMS. The model reproduces the 
+experimental pT and centrality dependencies of the observed J/psi and Upsilon 
+suppressions, except for the larger observed suppression of J/psi at pT > 10 GeV. 
+The paper conveys interesting information, and I do not see any obvious flaw in 
+their theoretical implementation of the different effects included. However, 
+before I can recommend acceptance the following issues should be clarified:
+\newline
+
+
+
+%Dear Editor,
+%We would like to thank the referee for reviewing this paper and furnishing the report.
+%We have carefully considered all comments, and we have applied the corresponding changes to the original
+%version of the paper to address the issues raised. Detailed responses to all the comments made by referee
+%can be found below. We are at your disposal for any further clarifications and/or additional information.
+
+{\color{blue}
+We would like to thank the referee for reviewing this paper and furnishing the report.
+Detailed responses to all the comments made by referee can be found below.}
+
+
+\begin{enumerate}
+
+\item There is no discussion of the different contributions and suppression 
+mechanisms for prompt/feed-down J/$\psi$ mesons. This is a key element, considered 
+in the Upsilon case, but not in the J/$\psi$ case.
+
+{\color{red} \textbf{TBD} The feed-down contributions are not important J/$\psi$ case because they are
+  expected to be small at LHC energies?} 
+
+
+
+
+\item There is no explanation of how the authors take into account in their model 
+the different (central and forward) rapidities of the quarkonia measurements. 
+It seems that they fix their entropy density to the total charged particle density 
+measured in the top 0-5$\%$ most central PbPb collisions, dNch/deta=1943, but 
+nothing is said on how the rapidity dependence of this multiplicity is 
+taken into account in the modeling of their medium density. 
+
+{ \color{red} The initial temperature is estimated from the charged particle
+  multiplicity. The charged particle multiplicity is different for different
+  rapidity regions.
+}
+
+\item The symbols convention is not always clear. E.g. the authors use "Q" and 
+"q" as subindices for the same object (heavy quark) quantities. The use "M", 
+"m", m$_q$", "m$_Q$" for the same quantity (heavy-quark mass). They should check 
+all parameters and expressions and uniformize them. 
+
+{ \color{red} \textbf{TBD}
+  
+}
+\end{enumerate}
+
+
+- Page 2 line 9: - transition towards a quark-gluon plasma (QGP) state in which . \newline 
+- {\color{blue} done} \newline
+
+- Page 2 line 20: quarkonia \newline
+- {\color{blue} done} \newline
+
+- Page 2 has increases --> has increased
+- {\color{blue} done} \newline
+
+- Page 3 line 10: J/psis -> J/psi mesons \newline
+- {\color{blue} done} \newline
+
+- Page 3 where both a \newline
+- {\color{blue} done} \newline
+
+- measurement of the same at the CMS \newline
+- {\color{blue} modified} \newline
+
+field has attracted 
+- {\color{blue} modified} \newline
+
+ with the surrounding gluons 
+ - {\color{blue} modified} \newline
+ 
+* Page 4: \newline
+
+ Define key 'rhog' parameter in the text. \newline 
+- {\color{blue} done} \newline
+ in the color dipole ... \newline
+- {\color{blue} done}\newline
+
+* Page 5: \newline
+
+ Eq 5 --> Eq. (5) \newline
+
+* Page 6: \newline
+
+Captions Figs. 2, 3: Specify that the pT refers to the J/psi (not gluon) pT 
+- {\color{blue} done}\newline
+
+Eq. (6): Explicitly define s, MQ in the text.
+
+{\color{red} where $M_{Q}$ is the mass of quarkonia and $s$ is the centre of mass energy of
+of the quarkonium-gluon system. (note done yet as I am not sure.)}
+
+What is the motivation for the Tsallis function fit of Eq. (8)? Provide 
+a reference for the n = 14 parameter choice. 
+{\color{red} Since the heavy quarks produced are not fully thermalized in the medium
+  we use near thermal distributions given by Tsallis function. This is an
+  important improvement over previous paper~\cite{Kumar:2014kfa}.
+}
+
+* Page 7: 
+
+Eqs. (9), (10): 'Ncoll' is left completely undefined.
+- {\color{blue} done}\newline
+
+total final hadron multiplicity 
+- {\color{blue} done}\newline
+* Page 8: 
+
+Please write down the numerical value of the c.m.-energy-independent factors obtained 
+from the color evaporation model that they use to relate the heavy-quark and quarkonia 
+cross sections. 
+
+- {\color{red} \textbf{TBD}}\newline
+
+* Page 9: 
+
+Typo 'quamtity' [run spell-check] 
+- {\color{blue} done}\newline
+
+Uniformize style: "Fig. X(a)" or "Fig. X (a)", consistently throughout the text. 
+- {\color{red} \textbf{TBD}}\newline
+* Page 11: 
+
+for the ALICE 
+- {\color{blue} done}\newline
+... a trend that ... 
+- {\color{blue} done}\newline
+* Page 12: 
+
+kinetic --> kinematic 
+- {\color{blue} done}\newline
+
+Move the last line of the page "The states Upsilon(1S)... bound states." to 
+the text right before Eqs. (14)--(16). As of now there is a gap, discussing 
+other issues, between this sentence and its associated relevant text later on. 
+- {\color{blue} done}\newline
+* Page 14: 
+
+fis --> is 
+- {\color{blue} done}\newline
+* Page 15: 
+
+due to gluons in the QGP --> due to gluon dissociation in the QGP 
+[Note that the authors suggest that heavy-quark energy loss could explain 
+the difference, and this would be also "due to gluons".]
+- {\color{blue} done}\newline
+
+The summary would benefit from one sentence explaining the possible reason 
+(heavy-quark energy loss) of the lack of agreement of the model with 
+the amount of high-pT J/psi suppression seen in the data. 
+
+- {\color{red} \textbf{TBD}}\newline
+
+
+
+
+
+
+
+
+
+
+\noindent
+\begin{thebibliography}{100}
+\medskip
+
+%57
+
+
+  
+\end{thebibliography}
+
+
+
+
+
+
+
+\end{document}
