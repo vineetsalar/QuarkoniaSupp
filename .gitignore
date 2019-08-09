@@ -4,6 +4,9 @@
 *.root
 *.pptx
 *~
+*.aux
+*.log
+*.out
 ALICE_MediumEvolution.C
 Code/1_Fig2_SigmaDq0.png
 Code/BcPlusMeson/
