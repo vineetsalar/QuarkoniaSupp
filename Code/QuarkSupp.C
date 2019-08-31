@@ -607,7 +607,7 @@ void QuarkSupp()
   cout<<"N PbPb Y     "<<ErrorReCalculateExp(0.0020,BErrorPercent)<<endl;
 
 
-  //return;
+  return;
 
 
   new TCanvas;
@@ -5721,8 +5721,7 @@ Double_t NColl_276(int BinLow, int BinHigh)
 void TotalCharmProductionCross_ALICE()
 {
 
-  //================= ATLAS JPsi Raa Vs Npart ===================================//
- 
+   
   const int nbins = 2;
 
   Double_t Energy[nbins]={2.76,7.0};
@@ -5767,8 +5766,7 @@ void TotalCharmProductionCross_ALICE()
 void TotalBeautyProductionCross_ALICE()
 {
 
-  //================= ATLAS JPsi Raa Vs Npart ===================================//
- 
+  
   const int nbins = 2;
 
   Double_t Energy[nbins]={2.76,7.0};
