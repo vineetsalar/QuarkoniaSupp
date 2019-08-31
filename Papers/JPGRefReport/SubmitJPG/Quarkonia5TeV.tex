@@ -42,6 +42,7 @@
 %\linenumbers
 \author{Vineet Kumar}
 \address{Nuclear Physics Division, Bhabha Atomic Research Center, Mumbai, India}
+\address{Department of Physics, University Of Illinois, Chicago, USA}
 \ead{Vineet.Kumar@cern.ch}
 \author{Prashant Shukla}
 \address{Nuclear Physics Division, Bhabha Atomic Research Center, Mumbai, India}
@@ -268,7 +269,7 @@ The values of $\epsilon_0$ are taken as 0.64 and 1.10 GeV for the ground states,
 respectively~\cite{Karsch:1987pv}. For the excited states of bottomonia, the dissociation cross sections are
 used from Ref.~\cite{Chen:2017jje,Oh:2001rm}.
 
-Figure \ref{fig:SigmaDQ0} shows the gluon dissociation cross sections
+Figure~\ref{fig:SigmaDQ0} shows the gluon dissociation cross sections
 of $\Jpsi$ and $\Upsilon$(1S) as a function of gluon energy
 for both color-electric and color-magnetic dipole transitions.
 The color-magnetic dipole transition cross-section has similar shape as that of
@@ -292,16 +293,22 @@ distribution $f_{g}(p_g)$ as
                    & = & \frac{g_g}{(2\pi)^{3}} \int dp_g 2\pi p_g^{2} f_{g}(p_g) \int d\,{\rm cos\theta}\,\sigma_{D}(s)\,v_{\rm rel}(s),
 \label{Eqn:Diss}
 \end{eqnarray}
-where $\sigma_{D}(s) = \sigma_{D}(q^0(s))$. The formula in Eq.~\ref{Eqn:Diss} is assumed
+where $\sigma_{D}(s) = \sigma_{D}(q^0(s))$ in terms of the square of the center of
+mass energy $s$ of the quarkonium-gluon system given by
+$s=M_{Q}^{2} + 2  p_g \, \sqrt{M_{Q}^2 + p^2} - 2  p_g \, p \, {\rm cos\theta}$.
+Here $M_{Q}$ is the mass and $p$ is the momentum of quarkonium and $\theta$ is the angle
+between the quarkonium and the gluon.
+  The variables $q^0$ and $s$ are related by $q^{0} = (s-M_{Q}^{2})/(2\,M_{Q})$. 
+$v_{\rm rel}$ is the relative velocity between the quarkonium and the gluon~\cite{Kumar:2014kfa}.
+  The formula in Eq.~\ref{Eqn:Diss} is assumed
 for the most central collisions. We multiplied by a system size dependent factor
-($\sqrt{N_{\rm part}/2A}$) to get the dissociation rate for other centralities.   
-$v_{\rm rel}$ is the relative velocity, between the quarkonium and the gluon~\cite{Kumar:2014kfa}.
+($\sqrt{N_{\rm part}/2A}$) to get the dissociation rate for other centralities.
 %The relative velocity, $v_{\rm rel}$, between the quarkonium and the gluon is
 %\begin{eqnarray}
 % v_{\rm rel}  = {s- M_{Q}^{2} \over 2  p_g\sqrt{M_{Q}^2 + p^2}}.  
 %\label{eq7}
 %\end{eqnarray}
- The $\Jpsi$ gluon dissociation rates as a function of temperature $T$ are shown in 
+The $\Jpsi$ gluon dissociation rates as a function of temperature $T$ are shown in 
 Fig.~\ref{fig:DRateVsTempAndPt}(a) and as a function of $p_T$ in Fig.~\ref{fig:DRateVsTempAndPt}(b).
 The dissociation rate increases with temperature as the gluon density increases. 
 Also, it is maximum when the quarkonium is at rest and then decreases with $p_T$.
@@ -329,26 +336,44 @@ The formation rate of quarkonium at momentum {\bf p} can be written as
 \begin{equation}
 \frac{d\lambda_{F}}{d{\rm\bf p}} = \int \,d^{3}p_1 \,d^{3}p_2 \,\sigma_{F}(s)\, v_{\rm rel}(s)\,f_{q}(p_1)\, f_{\bar{q}} (p_2)\,\delta({\rm\bf p}-( {\rm\bf p_1} + {\rm\bf p_2} )).
 \end{equation}
-Here, $f_{q/\bar{q}}(p)$ are taken as normalized near thermal distribution functions
+The variable $s$ is the square of center of mass energy between the two heavy quarks with
+energy-momenta ($E_1$, ${\rm\bf p_1}$) and ($E_2$, ${\rm\bf p_2}$) with $v_{\rm rel}$ as their
+relative velocity.
+
+The functions $f_{q/\bar{q}}(p)$ are taken as normalized near-thermal distribution functions
 of $q/\bar{q}$. These distributions can be described by the Tsallis
 function as follows 
 \begin{equation}
-f_{q} (p,T) = A_{n}\,\left( 1+\frac{m_{T}}{n \,T} \right)^{-n},
+f_{q} (p,T) = A_{n}\,\left( 1+\frac{ \sqrt{p^2+m_q^2} }{n \,T} \right)^{-n}.
 \end{equation}
-where $m_T\,(=\sqrt{p_{T}^{2}+m^{2}})$ is transverse mass of the heavy quark, the
-power $n=14$ and $A_n$ is the normalization factor.
+Here $A_n$ is the normalization factor and $n=12$ is obtained by fitting the
+transverse momentum spectra of D mesons measured by CMS experiment~\cite{Sirunyan:2017xss}. Figure~\ref{fig:Figure3_Tsallis} shows the
+transverse momentum spectra of D mesons in pp and PbPb collisions
+at $\sqrt{s_{\rm NN}}=5.02$ TeV measured by CMS experiment. The spectra are fitted
+by Tsallis function with $n=6.9$ for pp and $n=12$ for PbPb collisions.
+\begin{figure}
+  \includegraphics[width=0.60\textwidth]{Figure3_DMeson_502TeV.pdf}
+  \caption{The transverse momentum spectra of D mesons in pp and PbPb collisions
+    at $\sqrt{s_{\rm NN}}=5.02$ TeV measured by CMS experiment~\cite{Sirunyan:2017xss}.
+    The spectra are fitted
+    by Tsallis function withb$n=6.9$ for pp and $n=12$ for PbPb collisions.
+  }
+  \label{fig:Figure3_Tsallis}
+\end{figure}
 
-Figure \ref{fig:ForRateVsTempAndPt} (a) shows the behaviour of the formation rate as a function 
+
+
+Figure~\ref{fig:ForRateVsTempAndPt}(a) shows the behaviour of the formation rate as a function 
 of temperature at different values of $\Jpsi$ meson $\pT$.
-Figure~\ref{fig:ForRateVsTempAndPt} (b) shows the same as a function
+Figure~\ref{fig:ForRateVsTempAndPt}(b) shows the same as a function
 of $\Jpsi$ meson $p_T$ at different temperatures.
 It shows that the $\Jpsi$ generated from uncorrelated heavy quark pairs has 
 softer $p_{T}$ distribution than that of $\Jpsi$'s coming from the initial hard scatterings.
 Thus the effect of recombination will be important at low and intermediate $p_T$.
 
 \begin{figure}
-\includegraphics[width=0.49\textwidth]{Fig3a_FormRateVsT.pdf}
-\includegraphics[width=0.49\textwidth]{Fig3b_FormRateVsPt.pdf}
+\includegraphics[width=0.49\textwidth]{Fig4a_FormRateVsT.pdf}
+\includegraphics[width=0.49\textwidth]{Fig4b_FormRateVsPt.pdf}
 \caption{(Color online) Formation rate of  $\Jpsi$ as a function of (a) temperature and 
 (b) transverse momentum.}
 \label{fig:ForRateVsTempAndPt}
@@ -399,7 +424,8 @@ from the total multiplictity in the given rapidity, assuming that the initial ti
 $\tau_0 = 0.3$ fm/$c$. The total multiplicity in a given rapidity window is
 1.5 times the measured charged particle multiplicity in PbPb collisions at 5.02 TeV.
 With the lattice EOS, at midrapidity, with $(dN_{\rm ch}/d\eta)_{0-5\%} = 1943$~\cite{Adam:2015ptt}, 
-we find $T_0 = 0.516$ GeV. The freeze out temperature is taken to be $T_f=0.140$ GeV.
+we find $T_0 = 0.516$ GeV. Likewise, at forward rapidity~\cite{Adam:2016ddh}; $T_0$ is
+0.487 GeV. The freeze out temperature is taken to be $T_f=0.140$ GeV.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Hadronic comovers}
@@ -548,14 +574,14 @@ $N^{\rm PbPb}$     &$26.23\pm3.35$       & $0.1381\pm0.0131$         & $1.007\pm
 \begin{figure}
 \begin{minipage}{1.0\linewidth}
 \centering
-{\includegraphics[width=0.49\textwidth]{Fig4a_CMS_RAAPt_Shade.pdf}}
-{\includegraphics[width=0.49\textwidth]{Fig4b_ATLAS_RAAPt_Shade.pdf}}
+{\includegraphics[width=0.49\textwidth]{Fig5a_CMS_RAAPt_Shade.pdf}}
+{\includegraphics[width=0.49\textwidth]{Fig5b_ATLAS_RAAPt_Shade.pdf}}
 \end{minipage}%
 \ \\
 \centering
 \begin{minipage}{0.5\linewidth}
 \centering
-{\includegraphics[width=1.0\textwidth]{Fig4c_ALICE_RAAPt_Shade.pdf}}
+{\includegraphics[width=1.0\textwidth]{Fig5c_ALICE_RAAPt_Shade.pdf}}
 \end{minipage}%
 \caption{(Color online)
 Calculated nuclear modification factor ($R_{AA}$) as a function of $\Jpsi$ 
@@ -569,14 +595,14 @@ measurements~\cite{Sirunyan:2017isk,ATLAS:2016qpn,Adam:2016rdg}.}
 \begin{figure}
 \begin{minipage}{1.0\linewidth}
 \centering
-{\includegraphics[width=0.49\textwidth]{Fig5a_CMS_RAANPart_Shade.pdf}}
-{\includegraphics[width=0.49\textwidth]{Fig5b_ATLAS_RAANPart_Shade.pdf}}
+{\includegraphics[width=0.49\textwidth]{Fig6a_CMS_RAANPart_Shade.pdf}}
+{\includegraphics[width=0.49\textwidth]{Fig6b_ATLAS_RAANPart_Shade.pdf}}
 \end{minipage}%
 \ \\
 \centering
 \begin{minipage}{0.5\linewidth}
 \centering
-{\includegraphics[width=1.0\textwidth]{Fig5c_ALICE_RAANPart_Shade.pdf}}
+{\includegraphics[width=1.0\textwidth]{Fig6c_ALICE_RAANPart_Shade.pdf}}
 \end{minipage}%
 \caption{(Color online) Calculated nuclear modification factor ($R_{AA}$) of $\Jpsi$ as a function
   of centrality of collisions, compared with (a) CMS, (b) ATLAS and (c) ALICE
@@ -590,8 +616,8 @@ measurements~\cite{Sirunyan:2017isk,ATLAS:2016qpn,Adam:2016rdg}.}
 
 
 \begin{figure}
-\includegraphics[width=0.49\textwidth]{Fig6a_Y1S_CMS_RAAPt_Shade.pdf}
-\includegraphics[width=0.49\textwidth]{Fig6b_Y2S_CMS_RAAPt_Shade.pdf}
+\includegraphics[width=0.49\textwidth]{Fig7a_Y1S_CMS_RAAPt_Shade.pdf}
+\includegraphics[width=0.49\textwidth]{Fig7b_Y2S_CMS_RAAPt_Shade.pdf}
 \caption{(Color online) Calculated nuclear modification factor ($R_{AA}$) of (a) $\Upsilon$(1S) and 
   (b) $\Upsilon$(2S) as a function of $p_{T}$ 
   compared with CMS measurements~\cite{CMS:2017ucd}.}
@@ -601,8 +627,8 @@ measurements~\cite{Sirunyan:2017isk,ATLAS:2016qpn,Adam:2016rdg}.}
 
 
 \begin{figure}
-\includegraphics[width=0.49\textwidth]{Fig7a_ALICE_Y1SRAAPt_Shade.pdf}
-\includegraphics[width=0.49\textwidth]{Fig7b_ALICE_Y2SRAAPt_Shade.pdf}
+\includegraphics[width=0.49\textwidth]{Fig8a_ALICE_Y1SRAAPt_Shade.pdf}
+\includegraphics[width=0.49\textwidth]{Fig8b_ALICE_Y2SRAAPt_Shade.pdf}
 \caption{(Color online) Calculated nuclear modification factor ($R_{AA}$) of (a) $\Upsilon$(1S) and 
   (b) $\Upsilon$(2S) as a function of $p_{T}$ in the kinetic range of ALICE detector at LHC ~\cite{ALICE:Y5TeV}.} 
  % The calculations are done for the most centreal 0-20$\%$ collisions
@@ -613,8 +639,8 @@ measurements~\cite{Sirunyan:2017isk,ATLAS:2016qpn,Adam:2016rdg}.}
 
 
 \begin{figure}
-\includegraphics[width=0.49\textwidth]{Fig8a_CMS_Y1SRAANPart_Shade.pdf}
-\includegraphics[width=0.49\textwidth]{Fig8b_CMS_Y2SRAANPart_Shade.pdf}
+\includegraphics[width=0.49\textwidth]{Fig9a_CMS_Y1SRAANPart_Shade.pdf}
+\includegraphics[width=0.49\textwidth]{Fig9b_CMS_Y2SRAANPart_Shade.pdf}
 \caption{(Color online) Calculated nuclear modification factor ($R_{AA}$) of 
   (a) $\Upsilon$(1S) and (b) $\Upsilon$(2S) as a function of centrality of the 
   collisions compared with the CMS measurements~\cite{CMS:2017ucd}.}
@@ -622,7 +648,7 @@ measurements~\cite{Sirunyan:2017isk,ATLAS:2016qpn,Adam:2016rdg}.}
 \end{figure}
 
 
-Figure~\ref{fig:JPsiRaaVsPt} (a) and (b) show the estimations of different contributions
+Figure~\ref{fig:JPsiRaaVsPt}(a) and (b) show the estimations of different contributions
 to the nuclear modification factor, $R_{AA}$, for the J/$\psi$ meson as a function of $p_T$ 
 along with the mid rapidity and high $p_T$ measurements from
 CMS~\cite{Sirunyan:2017isk} and ATLAS~\cite{ATLAS:2016qpn} experiments respectively.
@@ -675,15 +701,15 @@ of the $R_{AA}$ of $\Jpsi$ observed in the data.
 
 
 \begin{figure}
-\includegraphics[width=0.49\textwidth]{Fig9a_Y1S_ALICE_RAANPart_Shade.pdf}
-\includegraphics[width=0.49\textwidth]{Fig9b_Y2S_ALICE_RAANPart_Shade.pdf}
+\includegraphics[width=0.49\textwidth]{Fig10a_Y1S_ALICE_RAANPart_Shade.pdf}
+\includegraphics[width=0.49\textwidth]{Fig10b_Y2S_ALICE_RAANPart_Shade.pdf}
 \caption{(Color online) Calculated nuclear modification factor ($R_{AA}$) of 
   (a) $\Upsilon$(1S) and (b) $\Upsilon$(2S) as a function of centrality of 
   the collisions compared with the ALICE measurement~\cite{ALICE:Y5TeV}.}
 \label{fig:UpsilonRaaNPartALICE}
 \end{figure}
 
-Figure~\ref{fig:UpsilonRaaPtCMS} (a) and (b) show the calculations of contributions to
+Figure~\ref{fig:UpsilonRaaPtCMS}(a) and (b) show the calculations of contributions to
 the nuclear modification factor, $R_{AA}$, for the $\Upsilon$(1S) and $\Upsilon$(2S)
 respectively as a function of $p_T$ compared with the mid rapidity measurements from
 CMS~\cite{CMS:2017ucd}.  
@@ -716,7 +742,7 @@ $\Upsilon$(3S) and $\chi_b$(2P).
 The values of $f_1$ and $f_2$ are taken as 0.50~\cite{Strickland:2011aa}.
 
 
-Figure~\ref{fig:UpsilonRaaPtALICE} (a) and (b) show the model 
+Figure~\ref{fig:UpsilonRaaPtALICE}(a) and (b) show the model 
 prediction of the nuclear modification factor, $R_{AA}$, for the $\Upsilon$(1S)
 and $\Upsilon$(2S) respectively as a function of $p_T$ in the kinematic range
 covered by ALICE detector. The ALICE data~\cite{ALICE:Y5TeV} is well described by our model.
@@ -725,7 +751,7 @@ Figure~\ref{fig:UpsilonRaaNPartCMS}(a) depicts the calculated
 centrality dependence of the $\Upsilon$(1S) nuclear
 modification factor, along with the midrapidity data from CMS~\cite{CMS:2017ucd}.
 Our calculations combined with the pion dissociation and shadowing corrections 
-gives very good description of the measured data. Figure~\ref{fig:UpsilonRaaNPartCMS} (b)
+gives very good description of the measured data. Figure~\ref{fig:UpsilonRaaNPartCMS}(b)
 shows the same for the $\Upsilon$(2S) along with the midrapidity
 CMS measurements. The suppression of the excited $\Upsilon$(2S) states 
 is also well described by our model. As stated earlier, the effect of regeneration is
@@ -765,10 +791,13 @@ modification factor at low $p_T$  (ALICE case) as a function of centrality remai
 flat since the increased suppression is compensated by regenerated  $\Jpsi$'s
 as the system size grows. 
 We could reproduce the centrality dependence of $R_{AA}$ for high $p_T$ $\Jpsi$'s reasonably
-well. 
- The $\pT$ and centrality dependence of suppression of $\Upsilon$ states are well reproduced
-by the model.
- 
+well. The $\pT$ and centrality dependence of suppression of $\Upsilon$ states are well reproduced
+by the model. The high $\pT$ suppression ($p_T > 10$  GeV/$c$) of $\Jpsi$ measured by CMS and
+ATLAS is more than the suppression expected due to gluon dissociation in QGP.
+The energy loss from initial partonic scatterings might play a crucial role in this region
+as it does for open heavy flavour.
+
+
 \section{Acknowledgement}
 Authors thank Board of Research in Nuclear Sciences (BRNS) and Alexander von Humboldt (AvH)
 foundation for support. 
@@ -1111,7 +1140,12 @@ A.~Adare {\it et al.}  [PHENIX Collaboration],
   Phys.\ Rev.\ C {\bf 73}, 014904 (2006).
   %[nucl-th/0505055].
 
-  
+
+\bibitem{Sirunyan:2017xss}
+  A.~M.~Sirunyan {\it et al.} [CMS Collaboration],
+  ``Nuclear modification factor of D$^0$ mesons in PbPb collisions at  $\sqrt{s_\mathrm{NN}} = 5.02$ TeV,''
+  Phys.\ Lett.\ B {\bf 782} (2018) 474.  [arXiv:1708.04962 [nucl-ex]].
+
 \bibitem{Huovinen:2009yb} 
   P.~Huovinen and P.~Petreczky,
   ``QCD Equation of State and Hadron Resonance Gas,''
@@ -1128,6 +1162,16 @@ A.~Adare {\it et al.}  [PHENIX Collaboration],
   ``Centrality dependence of the charged-particle multiplicity density at midrapidity in PbPb collisions at $\sqrt{s_{\rm NN}}$ = 5.02 TeV,''
   Phys.\ Rev.\ Lett.\  {\bf 116}, 222302 (2016),[arXiv:1512.06104 [nucl-ex]].
   
+
+\bibitem{Adam:2016ddh} 
+  J.~Adam {\it et al.} [ALICE Collaboration],
+  ``Centrality dependence of the pseudorapidity density distribution for charged particles
+  in Pb-Pb collisions at $\sqrt{s_{\rm NN}}=5.02$ TeV,''
+  Phys.\ Lett.\ B {\bf 772}, 567 (2017),
+  [arXiv:1612.08966 [nucl-ex]].
+
+
+
   
 \bibitem{Vogt:1988fj} 
   R.~Vogt, M.~Prakash, P.~Koch and T.~H.~Hansson,
